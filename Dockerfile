@@ -1,6 +1,6 @@
 # Using official python runtime base image
 FROM python:3
-
+COPY . .
 # Install our requirements.txt
 ADD requirements.txt /opt/app-root/src/requirements.txt
 RUN pip install -r requirements.txt
