@@ -35,7 +35,7 @@ metadata:
     app: pipelines-vote-ui
   name: pipelines-vote-ui
 spec:
-  port:
+  ports:
     - name: http
       port: 8080
       targetPort: 8080
