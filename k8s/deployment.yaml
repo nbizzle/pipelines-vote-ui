@@ -15,18 +15,20 @@ spec:
         app: pipelines-vote-ui
     spec:
       containers:
-      - name: pipelines-vote-ui
-        image: __IMAGE__
-        ports:
-        - containerPort: 8080
-          protocol: TCP
-        - containerPort: 9090
-          protocol: TCP
-        env:
-        - name: VOTING_API_SERVICE_HOST
-          value: pipelines-vote-api
-        - name: VOTING_API_SERVICE_PORT
-          value: "9000"
+        - name: pipelines-vote-ui
+          image: __IMAGE__
+          ports:
+          - containerPort: 8080
+            protocol: TCP
+          - containerPort: 9090
+            protocol: TCP
+          env:
+          - name: VOTING_API_SERVICE_HOST
+            value: pipelines-vote-api
+          - name: VOTING_API_SERVICE_PORT
+            value: "9000"
+      imagePullSecrets: 
+        - name : regcred
 ---
 apiVersion: v1
 kind: Service
