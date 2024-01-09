@@ -28,7 +28,7 @@ spec:
           - name: VOTING_API_SERVICE_PORT
             value: "9000"
       imagePullSecrets: 
-        - name : regcred
+        - name : kaniko-secret
 ---
 apiVersion: v1
 kind: Service
